@@ -1,8 +1,4 @@
-# Creating API for our Previous Model
-
-## What does this project?
-
-We have developed an API to leverage the abilities of our previous model.
+# Testing API for our Previous Model
 
 ## How can I create my own API using this model?
 
@@ -17,7 +13,7 @@ pip install -r requirements.txt
 2. Run the application file:
 
 ```
-uvicorn ask_friend:app
+uvicorn main:app
 ```
 
 ## How can I interact with the model using the API?
@@ -30,21 +26,12 @@ Send a POST request with raw JSON data containing your question. For example:
 
 ```
 {
-    "text": "Где ты учишься?"
+    "text": "Good"
 }
 
 ```
 
 The model will respond with:
-
-```
-{
-    "score": 0.6466110348701477,
-    "start": 42,
-    "end": 86,
-    "answer": " в Уфимском университете."
-}
-```
 
 2. Using cURL
 
@@ -55,19 +42,9 @@ curl -X 'POST' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
-  "text": "Как дела?"
+  "text": "Good"
 }'
 ```
-
-The model will respond with:
-
-```
-{
-  "score": 0.8254371881484985,
-  "start": 24,
-  "end": 33,
-  "answer": " 22 года."
-}
 
 ```
 
